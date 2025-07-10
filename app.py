@@ -8,4 +8,4 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     count = get_hit_count()
-    return 'Hello docker ds friends! I have been seen {} times.\n'.format(count)
+    return 'Hello  friends! I have been seen {} times.\n'.format(count)

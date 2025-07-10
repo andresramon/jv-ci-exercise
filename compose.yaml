@@ -3,8 +3,18 @@ services:
     build: .
     ports:
       - "8000:5000"
+    volumes:
+      - .:/code
+      - db_data:/code/data
+    environment:
+      - FLASK_ENV=development
     develop:
       watch:
         - action: sync
           path: .
           target: /code
+          ignore:
+            - data/
+
+volumes:
+  db_data:

@@ -1,10 +1,14 @@
 import sqlite3
 import os
 
-DATABASE_FILE = 'hit_count.db'
+DATABASE_DIR = 'data'
+DATABASE_FILE = os.path.join(DATABASE_DIR, 'hit_count.db')
 
 def init_db():
     """Inicializa la base de datos si no existe"""
+    # Crear directorio si no existe
+    os.makedirs(DATABASE_DIR, exist_ok=True)
+    
     conn = sqlite3.connect(DATABASE_FILE)
     cursor = conn.cursor()
     cursor.execute('''
