@@ -8,5 +8,3 @@ services:
         - action: sync
           path: .
           target: /code
-  redis:
-    image: "redis:alpine"
