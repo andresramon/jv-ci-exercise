@@ -1,0 +1,7 @@
+services:
+  web:
+    image: ghcr.io/andresramon/jv-ci-exercise:latest
+    ports:
+      - '${PORT}:5000'
+  redis:
+    image: redis:alpine
