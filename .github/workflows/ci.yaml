@@ -1,5 +1,9 @@
 name: CI · Build & Push
 
+permissions:
+  contents: read        # para checkout del código
+  packages: write       # para push al Container Registry
+  
 on:
   push:
     branches:
